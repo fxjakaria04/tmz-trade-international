@@ -7,11 +7,164 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AIA Ventures</title>
   <link rel="stylesheet" href="./public/css/output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-  <nav class="w-full">
-    
+  <!-- Navbar -->
+  <nav x-data="{ navRes: false }" @click.outside="navRes = false" class="w-full bg-zinc-100">
+    <div class="parent relative py-2 flex justify-between">
+      <a href="index.html">
+        <img src="https://fxjakaria04.github.io/AIA-Ventures-LTD/src/img/AiA-full-logo%201.png" alt="Logo" class="h-12">
+      </a>
+      <div 
+        :class="{'hidden': !navRes, 'flex': navRes}" 
+        class="absolute md:static top-16 left-0 bg-gray-200 md:bg-transparent w-full md:w-auto flex-col md:flex-row md:flex items-center gap-3 text-sm text-gray-700">
+        <a href="#" class="hover:text-green-600 px-4 py-2">Blog</a>
+        <a href="#" class="hover:text-green-600 px-4 py-2">Service</a>
+        <a href="#" class="hover:text-green-600 px-4 py-2">Partner with us</a>
+      </div>
+      <div class="hidden md:flex items-center gap-4 text-sm text-gray-700">
+        <a href="#" class="hover:text-green-600">Login</a>
+        <button class="px-4 py-2 border rounded-lg border-green-600 hover:bg-green-600 hover:text-white transition-all">
+          Get Demo
+        </button>
+      </div>
+      <button @click="navRes = !navRes" class="md:hidden px-5">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
   </nav>
+  <!-- prices -->
+   <section class="w-full py-5 bg-zinc-300">
+    <div class="parent flex flex-col gap-y-3">
+      <!-- Product navigation -->
+       <div class="flex  md:items-center flex-col md:flex-row gap-3">
+        <button class="px-10 py-2 border border-green-400 bg-green-400 rounded-md shadow-lg">ALL Cars</button>
+        <button class="px-10 py-2 border bg-zinc-200 rounded-md shadow-lg">Economy</button>
+        <button class="px-10 py-2 border bg-zinc-200 rounded-md shadow-lg">Luxury</button>
+        <button class="px-10 py-2 border bg-zinc-200 rounded-md shadow-lg">Business</button>
+       </div>
+       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-5">
+        <div class="shadow-lg col-span-1 p-5 rounded-2xl bg-zinc-200 flex flex-col items-center gap-y-2 hover:scale-105 transitions hover:bg-green-200">
+          <img src="public/img/red-car.png" alt="" class="w-60">
+          <div class="w-full flex items-center justify-between">
+            <h2 class="font-semibold text-lg">BMW J8</h2>
+            <div class="flex items-center">
+              <img src="public/img/bdt.png" alt="" class="w-4">
+              <span class="text-sm">1500/h</span>
+            </div>
+          </div>
+          <div class="w-full grid grid-cols-3 text-xs text-[#3a3a3a]">
+            <div class="col-span-1 border-r border-gray-400">
+              <i class="fa-solid fa-gas-pump"></i>
+              <span>15 km/ph</span>
+            </div>
+            <div class="col-span-1 border-r text-center border-gray-400">
+              <i class="fa-solid fa-gas-pump"></i>
+              <span>2020</span>
+            </div>
+            <div class="col-span-1 border-r text-end">
+              <span>Gasoline</span>
+            </div>
+          </div>
+        </div>
+        <div class="shadow-lg col-span-1 p-5 rounded-2xl bg-zinc-200 flex flex-col items-center gap-y-2 hover:scale-105 transitions hover:bg-green-200">
+          <img src="public/img/darkpurple.png" alt="" class="w-60">
+          <div class="w-full flex items-center justify-between">
+            <h2 class="font-semibold text-lg">BMW M8</h2>
+            <div class="flex items-center">
+              <img src="public/img/bdt.png" alt="" class="w-4">
+              <span class="text-sm">1500/h</span>
+            </div>
+          </div>
+          <div class="w-full grid grid-cols-3 text-xs text-[#3a3a3a]">
+            <div class="col-span-1 border-r border-gray-400">
+              <i class="fa-solid fa-gas-pump"></i>
+              <span>15 km/ph</span>
+            </div>
+            <div class="col-span-1 border-r text-center border-gray-400">
+              <i class="fa-solid fa-gas-pump"></i>
+              <span>2020</span>
+            </div>
+            <div class="col-span-1 border-r text-end">
+              <span>Gasoline</span>
+            </div>
+          </div>
+        </div>
+        <div class="shadow-lg col-span-1 p-5 rounded-2xl bg-zinc-200 flex flex-col items-center gap-y-2 hover:scale-105 transitions hover:bg-green-200">
+          <img src="public/img/graycar.png" alt="" class="w-60">
+          <div class="w-full flex items-center justify-between">
+            <h2 class="font-semibold text-lg">BMW T8</h2>
+            <div class="flex items-center">
+              <img src="public/img/bdt.png" alt="" class="w-4">
+              <span class="text-sm">1500/h</span>
+            </div>
+          </div>
+          <div class="w-full grid grid-cols-3 text-xs text-[#3a3a3a]">
+            <div class="col-span-1 border-r border-gray-400">
+              <i class="fa-solid fa-gas-pump"></i>
+              <span>15 km/ph</span>
+            </div>
+            <div class="col-span-1 border-r text-center border-gray-400">
+              <i class="fa-solid fa-gas-pump"></i>
+              <span>2020</span>
+            </div>
+            <div class="col-span-1 border-r text-end">
+              <span>Gasoline</span>
+            </div>
+          </div>
+        </div>
+        <div class="shadow-lg col-span-1 p-5 rounded-2xl bg-zinc-200 flex flex-col items-center gap-y-2 hover:scale-105 transitions hover:bg-green-200">
+          <img src="public/img/darkpurple.png" alt="" class="w-60">
+          <div class="w-full flex items-center justify-between">
+            <h2 class="font-semibold text-lg">BMW M8</h2>
+            <div class="flex items-center">
+              <img src="public/img/bdt.png" alt="" class="w-4">
+              <span class="text-sm">1500/h</span>
+            </div>
+          </div>
+          <div class="w-full grid grid-cols-3 text-xs text-[#3a3a3a]">
+            <div class="col-span-1 border-r border-gray-400">
+              <i class="fa-solid fa-gas-pump"></i>
+              <span>15 km/ph</span>
+            </div>
+            <div class="col-span-1 border-r text-center border-gray-400">
+              <i class="fa-solid fa-gas-pump"></i>
+              <span>2020</span>
+            </div>
+            <div class="col-span-1 border-r text-end">
+              <span>Gasoline</span>
+            </div>
+          </div>
+        </div>
+        <div class="shadow-lg col-span-1 p-5 rounded-2xl bg-zinc-200 flex flex-col items-center gap-y-2 hover:scale-105 transitions hover:bg-green-200">
+          <img src="public/img/red-car.png" alt="" class="w-60">
+          <div class="w-full flex items-center justify-between">
+            <h2 class="font-semibold text-lg">BMW J8</h2>
+            <div class="flex items-center">
+              <img src="public/img/bdt.png" alt="" class="w-4">
+              <span class="text-sm">1500/h</span>
+            </div>
+          </div>
+          <div class="w-full grid grid-cols-3 text-xs text-[#3a3a3a]">
+            <div class="col-span-1 border-r border-gray-400">
+              <i class="fa-solid fa-gas-pump"></i>
+              <span>15 km/ph</span>
+            </div>
+            <div class="col-span-1 border-r text-center border-gray-400">
+              <i class="fa-solid fa-gas-pump"></i>
+              <span>2020</span>
+            </div>
+            <div class="col-span-1 border-r text-end">
+              <span>Gasoline</span>
+            </div>
+          </div>
+        </div>
+       </div>
+       <button class="border self-center py-1 hover:font-medium px-8 text-sm rounded-md hover:text-white hover:bg-green-700 transitions border-green-700 text-gray-600">Show All</button>
+    </div>
+   </section>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </body>
 
 </html>

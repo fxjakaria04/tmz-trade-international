@@ -2,3 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.parent {
+    @apply w-11/12 m-auto;
+}
+.transitions {
+    @apply transition-all duration-150;
+}
+[x-cloak]{
+    display: none;
+}
