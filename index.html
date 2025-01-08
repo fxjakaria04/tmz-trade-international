@@ -18,12 +18,12 @@
       </a>
       <div 
         :class="{'hidden': !navRes, 'flex': navRes}" 
-        class="absolute md:static top-16 left-0 bg-gray-200 md:bg-transparent w-full md:w-auto flex-col md:flex-row md:flex items-center gap-3 text-sm text-gray-700">
+        class="absolute md:static top-16 left-0 bg-gray-200 md:bg-transparent w-full md:w-auto flex-col md:flex-row md:flex items-center gap-3 text-sm text-alpha">
         <a href="#" class="hover:text-green-600 px-4 py-2">Blog</a>
         <a href="#" class="hover:text-green-600 px-4 py-2">Service</a>
         <a href="#" class="hover:text-green-600 px-4 py-2">Partner with us</a>
       </div>
-      <div class="hidden md:flex items-center gap-4 text-sm text-gray-700">
+      <div class="hidden md:flex items-center gap-4 text-sm text-alpha">
         <a href="#" class="hover:text-green-600">Login</a>
         <button class="px-4 py-2 border rounded-lg border-green-600 hover:bg-green-600 hover:text-white transition-all">
           Get Demo
@@ -35,7 +35,7 @@
     </div>
   </nav>
   <!-- prices -->
-   <section class="w-full py-5 bg-zinc-300">
+   <section class="w-full py-5 my-5 bg-zinc-300">
     <div class="parent flex flex-col gap-y-3">
       <!-- Product navigation -->
        <div class="flex  md:items-center flex-col md:flex-row gap-3">
@@ -164,6 +164,99 @@
        <button class="border self-center py-1 hover:font-medium px-8 text-sm rounded-md hover:text-white hover:bg-green-700 transitions border-green-700 text-gray-600">Show All</button>
     </div>
    </section>
+   <!-- About -->
+   <section class="w-full py-5 my-5 bg-white">
+    <div class="parent grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div class="flex flex-col gap-y-4 text-justify">
+        <h1 class="text-4xl font-semibold">About Us</h1>
+        <p class="text-sm font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur maxime illo, iste quis alias quos earum eum, error culpa fugiat praesentium perferendis omnis sed cum tenetur quia ipsam pariatur. Fugiat reprehenderit molestiae cupiditate quis porro nesciunt ut aperiam culpa, accusantium impedit. Asperiores praesentium blanditiis, tempore beatae ut inventore, similique debitis autem qui, quas maiores modi optio ratione nemo vero perferendis illum ipsam laboriosam ad amet eligendi. Nulla modi expedita itaque nesciunt dicta maiores tenetur ipsam voluptatem veniam, sed quia aut debitis corporis accusantium nam recusandae illum cumque cupiditate molestiae delectus consectetur! Tenetur reprehenderit aliquid fugit nisi architecto tempore ad accusantium.</p>
+        <p class="text-sm font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusantium nam quidem qui iste veritatis veniam aut, corporis consequatur magnam ad ut, cumque, animi asperiores ex eius quis numquam voluptatibus! Ad dignissimos reiciendis placeat culpa necessitatibus itaque, sit quia hic veniam voluptatibus assumenda. Quibusdam perspiciatis impedit illo, a odio possimus.</p>
+        <button class="self-start mt-5 justify-self-end px-10 py-2 border-green-700 border font-medium hover:bg-green-700 hover:text-white transitions">Learn more</button>
+      </div>
+      <img src="public/img/about.jpg" alt="" class="col-span-1 rounded-lg">
+    </div>
+   </section>
+   <!-- Team -->
+    <section class="w-full py-5 my-5 bg-zinc-300">
+      <div class="parent">
+        <h1 class="text-4xl font-semibold text-center">The Faces Behind the Service</h1>
+        <p class="text-center text-gray-600 text-sm mt-1">A team focused on making your car rental experience effortless.</p>
+        <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-5">
+          <div class="col-span-1 bg-zinc-200 shadow-lg rounded-md overflow-hidden">
+            <div class="w-full h-52">
+              <img src="public/img/team-member-1.jpg" alt="" class="h-full w-full object-cover">
+            </div>
+            <div class="p-2">
+              <div class="w-full flex items-center justify-between gap-2">
+                <h2 class="text-lg font-semibold truncate">JAKARIA TALUKDAR</h2>
+                <div class="flex items-center gap-2 text-xl">
+                  <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa-brands fa-square-instagram"></i>
+                  </a>
+                </div>
+              </div>
+              <p class="text-sm text-alpha">web developer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+     <footer class="w-full py-5 mt-5 bg-zinc-100">
+      <div class="parent grid grid-cols-12 gap-y-10">
+        <div class="col-span-12 flex items-center justify-between py-3">
+          <a href="" class="w-6/12">
+            <img src="public/img/logo.png" alt="" class="h-20">
+          </a>
+          <span class="w-6/12 font-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quibusdam tenetur dicta odio vel, neque repellat, libero nam similique, ex officia nulla sequi sit.</span>
+        </div>
+        <div class="col-span-4 flex flex-col gap-y-3">
+          <span class="text-sm text-alpha font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, deserunt.</span>
+          <span class="flex items-center gap-2 text-sm">
+            <i class="fa-solid fa-phone"></i>
+            <span>01500000000</span>
+          </span>
+          <div class="flex items-center gap-3 text-2xl text-teal-800">
+            <a href="">
+              <i class="fa-brands fa-square-facebook"></i>
+            </a>
+            <a href="">
+              <i class="fa-brands fa-square-x-twitter"></i>
+            </a>
+            <a href="">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="">
+              <i class="fa-brands fa-square-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-span-2 flex items-center flex-col gap-y-3 text-alpha text-sm">
+          <strong class="text-black">ShortCut</strong>
+          <span>Dashboard</span>
+          <span>Team</span>
+          <span>FAQs</span>
+          <span>Terms and Conditions</span>
+        </div>
+        <div class="col-span-2 flex items-center flex-col gap-y-3 text-alpha text-sm">
+          <strong class="text-black">Additional Resources</strong>
+          <span>Car Types/Fleet</span>
+          <span>Pricing Plans</span>
+          <span>Blog or News</span>
+          <span>Promotions/Discounts</span>
+        </div>
+        <div class="col-span-4 flex items-end flex-col gap-y-3 text-alpha text-sm">
+          <strong class="text-black">Additional Resources</strong>
+          <span>Car Types/Fleet</span>
+          <span>Pricing Plans</span>
+          <span>Blog or News</span>
+          <span>Promotions/Discounts</span>
+        </div>
+      </div>
+     </footer>
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </body>
 
