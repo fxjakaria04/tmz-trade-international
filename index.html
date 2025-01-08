@@ -14,7 +14,7 @@
   <nav x-data="{ navRes: false }" @click.outside="navRes = false" class="w-full bg-zinc-100">
     <div class="parent relative py-2 flex justify-between">
       <a href="index.html">
-        <img src="https://fxjakaria04.github.io/AIA-Ventures-LTD/src/img/AiA-full-logo%201.png" alt="Logo" class="h-12">
+        <img src="public/img/logo.png" alt="Logo" class="h-12">
       </a>
       <div 
         :class="{'hidden': !navRes, 'flex': navRes}" 
@@ -45,7 +45,7 @@
         <button class="px-10 py-2 border bg-zinc-200 rounded-md shadow-lg">Business</button>
        </div>
        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-5">
-        <div class="shadow-lg col-span-1 p-5 rounded-2xl bg-zinc-200 flex flex-col items-center gap-y-2 hover:scale-105 transition-all duration-300 hover:ease-in-out hover:bg-green-200">
+        <a href="offerDetails.html" class="shadow-lg col-span-1 p-5 rounded-2xl bg-zinc-200 flex flex-col items-center gap-y-2 hover:scale-105 transition-all duration-300 hover:ease-in-out hover:bg-green-200">
           <img src="public/img/red-car.png" alt="" class="w-60">
           <div class="w-full flex items-center justify-between">
             <h2 class="font-semibold text-lg">BMW J8</h2>
@@ -67,7 +67,7 @@
               <span>Gasoline</span>
             </div>
           </div>
-        </div>
+        </a>
         <div class="shadow-lg col-span-1 p-5 rounded-2xl bg-zinc-200 flex flex-col items-center gap-y-2 hover:scale-105 transitions hover:bg-green-200">
           <img src="public/img/darkpurple.png" alt="" class="w-60">
           <div class="w-full flex items-center justify-between">
