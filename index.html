@@ -39,13 +39,13 @@
     <div class="parent flex flex-col gap-y-3">
       <!-- Product navigation -->
        <div class="flex  md:items-center flex-col md:flex-row gap-3">
-        <button class="px-10 py-2 border border-green-400 bg-green-400 rounded-md shadow-lg">ALL Cars</button>
+        <button class="px-10 py-2 border border-teal-700 font-medium bg-teal-700 text-white rounded-md shadow-lg">ALL Cars</button>
         <button class="px-10 py-2 border bg-zinc-200 rounded-md shadow-lg">Economy</button>
         <button class="px-10 py-2 border bg-zinc-200 rounded-md shadow-lg">Luxury</button>
         <button class="px-10 py-2 border bg-zinc-200 rounded-md shadow-lg">Business</button>
        </div>
        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-5">
-        <div class="shadow-lg col-span-1 p-5 rounded-2xl bg-zinc-200 flex flex-col items-center gap-y-2 hover:scale-105 transitions hover:bg-green-200">
+        <div class="shadow-lg col-span-1 p-5 rounded-2xl bg-zinc-200 flex flex-col items-center gap-y-2 hover:scale-105 transition-all duration-300 hover:ease-in-out hover:bg-green-200">
           <img src="public/img/red-car.png" alt="" class="w-60">
           <div class="w-full flex items-center justify-between">
             <h2 class="font-semibold text-lg">BMW J8</h2>
@@ -161,14 +161,14 @@
           </div>
         </div>
        </div>
-       <button class="border self-center py-1 hover:font-medium px-8 text-sm rounded-md hover:text-white hover:bg-green-700 transitions border-green-700 text-gray-600">Show All</button>
+       <button class="border self-center py-1 hover:font-medium px-8 text-sm rounded-md hover:text-white hover:bg-teal-700 transitions border-teal-700 text-gray-600">Show All</button>
     </div>
    </section>
    <!-- About -->
    <section class="w-full py-5 my-5 bg-white">
     <div class="parent grid grid-cols-1 md:grid-cols-2 gap-10">
       <div class="flex flex-col gap-y-4 text-justify">
-        <h1 class="text-4xl font-semibold">About Us</h1>
+        <h1 class="text-4xl font-semibold text-teal-800">About Us</h1>
         <p class="text-sm font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur maxime illo, iste quis alias quos earum eum, error culpa fugiat praesentium perferendis omnis sed cum tenetur quia ipsam pariatur. Fugiat reprehenderit molestiae cupiditate quis porro nesciunt ut aperiam culpa, accusantium impedit. Asperiores praesentium blanditiis, tempore beatae ut inventore, similique debitis autem qui, quas maiores modi optio ratione nemo vero perferendis illum ipsam laboriosam ad amet eligendi. Nulla modi expedita itaque nesciunt dicta maiores tenetur ipsam voluptatem veniam, sed quia aut debitis corporis accusantium nam recusandae illum cumque cupiditate molestiae delectus consectetur! Tenetur reprehenderit aliquid fugit nisi architecto tempore ad accusantium.</p>
         <p class="text-sm font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusantium nam quidem qui iste veritatis veniam aut, corporis consequatur magnam ad ut, cumque, animi asperiores ex eius quis numquam voluptatibus! Ad dignissimos reiciendis placeat culpa necessitatibus itaque, sit quia hic veniam voluptatibus assumenda. Quibusdam perspiciatis impedit illo, a odio possimus.</p>
         <button class="self-start mt-5 justify-self-end px-10 py-2 border-green-700 border font-medium hover:bg-green-700 hover:text-white transitions">Learn more</button>
@@ -179,7 +179,7 @@
    <!-- Team -->
     <section class="w-full py-5 my-5 bg-zinc-300">
       <div class="parent">
-        <h1 class="text-4xl font-semibold text-center">The Faces Behind the Service</h1>
+        <h1 class="text-4xl font-semibold text-center text-teal-800">The Faces Behind the Service</h1>
         <p class="text-center text-gray-600 text-sm mt-1">A team focused on making your car rental experience effortless.</p>
         <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-5">
           <div class="col-span-1 bg-zinc-200 shadow-lg rounded-md overflow-hidden">
@@ -204,6 +204,74 @@
         </div>
       </div>
     </section>
+    <!-- Customers review -->
+     <section class="w-full py-5 my-5 bg-zinc-200">
+      <div class="w-2/4 m-auto text-center pb-3 mb-3 border-b border-gray-700">
+        <h1 class="text-4xl font-bold text-teal-800">Every Journey Has a Story</h1>
+        <p class="text-alpha text-sm">Discover why thousands of happy customers choose us for their car rental needs.</p>
+      </div>
+
+      <div x-data="slider()" x-init="startAutoSlide()" class="relative overflow-hidden mb-10" @mouseover="pauseAutoSlide()" @mouseleave="startAutoSlide()">
+        <!-- Slider Container -->
+        <div class="flex transition-transform duration-500"
+             :style="'transform: translateX(-' + currentIndex * 100 + '%)'">
+          <template x-for="(slide, index) in slides" :key="index">
+            <div class="parent grid grid-cols-2 gap-x-6 min-w-full py-7">
+              <div class="col-span-1 text-end flex items-end flex-col gap-y-2">
+                <h1 class="text-2xl font-semibold" x-text="slide.title"></h1>
+                <p class="text-alpha text-sm w-5/6" x-text="slide.description"></p>
+              </div>
+              <div class="h-52 w-52">
+                <img :src="slide.image" alt="" class="w-full h-full object-cover">
+              </div>
+            </div>
+          </template>
+        </div>
+      
+        <!-- Controls -->
+        <div class="absolute inset-0 flex items-center justify-between px-4">
+          <button @click="prev" class="bg-gray-800 text-white h-8 w-8 flex items-center justify-center hover:bg-gray-600 rounded-full">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button @click="next" class="bg-gray-800 text-white h-8 w-8 flex items-center justify-center hover:bg-gray-600 rounded-full">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      
+        <!-- Indicators -->
+        <div class="absolute bottom-1 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          <template x-for="(slide, index) in slides" :key="index">
+            <button @click="currentIndex = index"
+                    :class="{'bg-gray-800': currentIndex === index, 'bg-gray-300': currentIndex !== index}"
+                    class="h-3 w-3 rounded-full"></button>
+          </template>
+        </div>
+      </div>
+      <div x-data="flowingSlider()" x-init="startAutoSlide()" class="parent overflow-hidden w-full">
+        <div class="flex transition-transform duration-700 ease-linear"
+            :style="'transform: translateX(-' + currentIndex * slideWidth + 'px)'">
+          <!-- Slides -->
+          <template x-for="(slide, index) in slides" :key="index">
+            <div class="h-36 w-64 border border-black flex-shrink-0 mx-2">
+              <img :src="slide.image" alt="Certificate" class="w-full h-full object-contain">
+            </div>
+          </template>
+
+          <!-- Duplicated slides for infinite loop -->
+          <template x-for="(slide, index) in slides" :key="'duplicate-' + index">
+            <div class="h-36 w-64 border border-black flex-shrink-0 mx-2">
+              <img :src="slide.image" alt="Certificate" class="w-full h-full object-contain">
+            </div>
+          </template>
+        </div>
+      </div>
+
+
+
+      
+      
+      
+     </section>
     <!-- footer -->
      <footer class="w-full py-5 mt-5 bg-zinc-100">
       <div class="parent grid grid-cols-2 md:grid-cols-12 gap-y-10">
@@ -264,6 +332,77 @@
         </div>
       </div>
      </footer>
+     <!-- Script for client review -->
+     <script>
+      function slider() {
+        return {
+          currentIndex: 0,
+          slides: [
+            {
+              title: "JAKARIA TALUKDAR",
+              description:
+                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque quisquam expedita voluptatem? Illo, ipsam possimus? Saepe adipisci hic blanditiis consectetur eos repudiandae itaque commodi quasi doloribus, numquam reiciendis dolor, optio laudantium, id sit placeat possimus! Sint voluptate asperiores minus reprehenderit quod non, debitis est molestiae, aperiam placeat, harum dolore ullam!",
+              image: "https://d2gwgwt9a7yxle.cloudfront.net/what_is_user_id_in_net_banking_mobile_871b681e52.jpg",
+            },
+            {
+              title: "SLIDE 2",
+              description: "Another slide content goes here. Replace this text with meaningful content.",
+              image: "https://via.placeholder.com/150",
+            },
+            {
+              title: "SLIDE 3",
+              description: "Another slide content goes here. Replace this text with meaningful content.",
+              image: "https://via.placeholder.com/150",
+            },
+          ],
+          interval: null,
+          startAutoSlide() {
+            this.interval = setInterval(() => {
+              this.next();
+            }, 1500);
+          },
+          pauseAutoSlide() {
+            clearInterval(this.interval);
+          },
+          next() {
+            this.currentIndex = (this.currentIndex + 1) % this.slides.length;
+          },
+          prev() {
+            this.currentIndex =
+              (this.currentIndex - 1 + this.slides.length) % this.slides.length;
+          },
+        };
+      }
+    </script>
+     <!-- Script for Customers slider -->
+     <script>
+      function flowingSlider() {
+        return {
+          currentIndex: 0, // Tracks the current slide index
+          slideWidth: 256, // Width of each slide (adjust based on the number of columns in your grid)
+          slides: [
+            { image: "public/img/logo.png" },
+            { image: "public/img/logo.png" },
+            { image: "public/img/logo.png" },
+            { image: "public/img/logo.png" },
+            { image: "public/img/logo.png" },
+            { image: "public/img/logo.png" },
+            // Add as many slides as needed
+          ],
+          startAutoSlide() {
+            setInterval(() => {
+              // Move to the next set of slides; if at the end, loop back to the first set
+              if (this.currentIndex + 1 >= this.slides.length) {
+                // Instant jump back to first slide (without animation) to avoid jumpy effect
+                this.currentIndex = 0;
+              } else {
+                this.currentIndex++;
+              }
+            }, 2000); // Slide every 2 seconds
+          },
+        };
+      }
+    </script>
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </body>
 
