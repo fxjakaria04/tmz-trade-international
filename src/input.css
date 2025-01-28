@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .parent {
-    @apply w-11/12 m-auto;
+    @apply w-10/12 m-auto;
 }
