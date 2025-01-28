@@ -159,8 +159,69 @@
 
     </div>
   </section>
-  
+  <!-- Why Choose Us -->
+   <section class="w-full my-10">
+    <div class="parent flex flex-col text-center gap-y-10">
+      <p class="text-xl text-[#2C3F69] font-medium">Why Choose Us</p>
+      <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div class="col-span-1 flex flex-col items-center gap-y-5">
+          <div class="h-32 w-32 rounded-full overflow-hidden">
+            <img src="public/img/8.jpg" alt="" class="w-full h-full object-cover">
+          </div>
+          <div class="w-full flex flex-col text-center gap-3">
+            <h2 class="text-[#2C3F69] text-xl font-medium">SUSTAINABILITY FOCUSED</h2>
+            <p class="text-justify text-xs md:text-sm">Zeal International Limited.  is to strengthen the supply chain by offering product quality, time maintaining and hassle free service to build up a long term business relationship.</p>
+          </div>
+        </div>
+        <div class="col-span-1 flex flex-col items-center gap-y-5">
+          <div class="h-32 w-32 rounded-full overflow-hidden">
+            <img src="public/img/9.jpg" alt="" class="w-full h-full object-cover">
+          </div>
+          <div class="w-full flex flex-col text-center gap-3">
+            <h2 class="text-[#2C3F69] text-xl font-medium">SUSTAINABILITY FOCUSED</h2>
+            <p class="text-justify text-xs md:text-sm">Zeal International Limited.  is to strengthen the supply chain by offering product quality, time maintaining and hassle free service to build up a long term business relationship.</p>
+          </div>
+        </div>
+        <div class="col-span-1 flex flex-col items-center gap-y-5">
+          <div class="h-32 w-32 rounded-full overflow-hidden">
+            <img src="public/img/10.jpg" alt="" class="w-full h-full object-cover">
+          </div>
+          <div class="w-full flex flex-col text-center gap-3">
+            <h2 class="text-[#2C3F69] text-xl font-medium">SUSTAINABILITY FOCUSED</h2>
+            <p class="text-justify text-xs md:text-sm">Zeal International Limited.  is to strengthen the supply chain by offering product quality, time maintaining and hassle free service to build up a long term business relationship.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+   </section>
 
+
+  <!-- product slider -->
+   <section class="w-full">
+    <div class="parent">
+      <div class="w-full border-b">
+        <h1 class="text-[#333] text-4xl font-semibold">Our Products</h1>
+      </div>
+      <div x-data="flowingSlider()" x-init="startAutoSlide()" class="overflow-hidden w-full py-5">
+        <div class="flex transition-transform duration-700 ease-linear"
+            :style="'transform: translateX(-' + currentIndex * slideWidth + 'px)'">
+          <!-- Slides -->
+          <template x-for="(slide, index) in slides" :key="index">
+            <div class="h-64 w-64 border bg-white rounded-md overflow-hidden flex-shrink-0 mx-2 shadow-md">
+              <img :src="slide.image" alt="Certificate" class="w-full h-full object-contain">
+            </div>
+          </template>
+
+          <!-- Duplicated slides for infinite loop -->
+          <template x-for="(slide, index) in slides" :key="'duplicate-' + index">
+            <div class="h-36 w-64 border bg-white rounded-md overflow-hidden flex-shrink-0 mx-2 shadow-md px-2">
+              <img :src="slide.image" alt="Certificate" class="w-full h-full object-contain">
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+   </section>
   <!-- script for hero slider -->
   <script>
     function slider() {
@@ -237,6 +298,62 @@
         };
       }
 
+  </script>
+   <!-- script for product slider -->
+   <script>
+    function flowingSlider() {
+      return {
+        currentIndex: 0, // Tracks the current slide index
+        slideWidth: 256, // Width of each slide (adjust based on the number of columns in your grid)
+        slides: [
+          { image: "public/img/product-slider/1.jpg" },
+          { image: "public/img/product-slider/2.jpg" },
+          { image: "public/img/product-slider/4.jpg" },
+          { image: "public/img/product-slider/7.jpg" },
+          { image: "public/img/product-slider/8.jpg" },
+          { image: "public/img/product-slider/10.jpg" },
+          { image: "public/img/product-slider/12.jpg" },
+          { image: "public/img/product-slider/13.jpg" },
+          { image: "public/img/product-slider/14.jpg" },
+          { image: "public/img/product-slider/15.jpg" },
+          { image: "public/img/product-slider/16.jpg" },
+          { image: "public/img/product-slider/17.jpg" },
+          { image: "public/img/product-slider/23.jpg" },
+          { image: "public/img/product-slider/24.jpg" },
+          { image: "public/img/product-slider/28.jpg" },
+          { image: "public/img/product-slider/30.jpg" },
+          { image: "public/img/product-slider/31.jpg" },
+          { image: "public/img/product-slider/31.jpg" },
+          { image: "public/img/product-slider/34.jpg" },
+          { image: "public/img/product-slider/36.jpg" },
+          { image: "public/img/product-slider/44.jpg" },
+          { image: "public/img/product-slider/48.jpg" },
+          { image: "public/img/product-slider/49.jpg" },
+          { image: "public/img/product-slider/50.jpg" },
+          { image: "public/img/product-slider/52.jpg" },
+          { image: "public/img/product-slider/53.jpg" },
+          { image: "public/img/product-slider/54.jpg" },
+          { image: "public/img/product-slider/55.jpg" },
+          { image: "public/img/product-slider/56.jpg" },
+          { image: "public/img/product-slider/57.jpg" },
+          { image: "public/img/product-slider/61.jpg" },
+          { image: "public/img/product-slider/62.jpg" },
+          { image: "public/img/product-slider/63.jpg" },
+          // Add as many slides as needed
+        ],
+        startAutoSlide() {
+          setInterval(() => {
+            // Move to the next set of slides; if at the end, loop back to the first set
+            if (this.currentIndex + 1 >= this.slides.length) {
+              // Instant jump back to first slide (without animation) to avoid jumpy effect
+              this.currentIndex = 0;
+            } else {
+              this.currentIndex++;
+            }
+          }, 2000); // Slide every 2 seconds
+        },
+      };
+    }
   </script>
   <!-- alpine.js cdn -->
    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
