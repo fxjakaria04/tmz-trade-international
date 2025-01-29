@@ -27,17 +27,17 @@
           <a href="about.html" class="leading-10">About Us</a>
         </li>
         <li x-data="{wwd: false}" @mouseover="wwd = true" @mouseout="wwd = false" class="relative flex items-center gap-x-2">
-          <a href="index.html" class="leading-10">What we do</a>
-          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
-          <ul x-show="wwd" x-cloak class="absolute z-10 w-full text-center top-[39px] whitespace-nowrap">
-            <li class="bg-[#002e4e] hover:bg-[#1f6496] cursor-pointer py-0.5 border-t border-black">
-              <a href="export.html" class="leading-10">Export</a>
-            </li>
-            <li class="bg-[#002e4e] hover:bg-[#1f6496] cursor-pointer py-0.5 border-t border-black">
-              <a href="import.html" class="leading-10">Import</a>
-            </li>
-          </ul>
-        </li>
+            <a href="index.html" class="leading-10">What we do</a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+            <ul x-show="wwd" x-cloak class="absolute z-10 w-full text-center top-[39px] whitespace-nowrap">
+              <li class="bg-[#002e4e] hover:bg-[#1f6496] cursor-pointer py-0.5 border-t border-black">
+                <a href="export.html" class="leading-10">Export</a>
+              </li>
+              <li class="bg-[#002e4e] hover:bg-[#1f6496] cursor-pointer py-0.5 border-t border-black">
+                <a href="import.html" class="leading-10">Import</a>
+              </li>
+            </ul>
+          </li>
         <li>
           <a href="authenticaty.html" class="leading-10">Authenticity</a>
         </li>
@@ -48,17 +48,17 @@
           <a href="galary.html" class="leading-10">Gallery</a>
         </li>
         <li x-data="{wwd: false}" @mouseover="wwd = true" @mouseout="wwd = false" class="relative flex items-center gap-x-2">
-          <a href="index.html" class="leading-10">SiSTER CONCERN</a>
+          <a class="leading-10">SiSTER CONCERN</a>
           <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
           <ul x-show="wwd" x-cloak class="z-10 absolute w-full text-center top-[39px] whitespace-nowrap">
             <li class="bg-[#002e4e] hover:bg-[#1f6496] cursor-pointer py-0.5 border-t border-black">
-              <a href="index.html" class="leading-10">TMZ Footwear</a>
+              <a class="leading-10">TMZ Footwear</a>
             </li>
             <li class="bg-[#002e4e] hover:bg-[#1f6496] cursor-pointer py-0.5 border-t border-black">
-              <a href="index.html" class="leading-10">TMZ Auto Parts</a>
+              <a class="leading-10">TMZ Auto Parts</a>
             </li>
             <li class="bg-[#002e4e] hover:bg-[#1f6496] cursor-pointer py-0.5 border-t border-black">
-              <a href="index.html" class="leading-10">TMZ Holidays</a>
+              <a class="leading-10">TMZ Holidays</a>
             </li>
           </ul>
         </li>
@@ -72,9 +72,9 @@
    <section class="w-full py-7">
     <div class="parent flex flex-col gap-y-14">
         <div class="relative w-full h-1 bg-gray-300">
-            <h2 class="absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 bg-white px-20 text-4xl font-semibold">About us</h2>
+            <h2 class="absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 bg-white md:px-20 px-5 whitespace-nowrap text-2xl md:text-4xl font-semibold">About us</h2>
         </div>
-        <div class="flex flex-col gap-y-5 text-xs tracking-widest leading-8 md:text-sm">
+        <div class="flex flex-col gap-y-5 text-xs tracking-widest leading-6 md:leading-8 md:text-sm">
             <p>In 2018, Md. Arif Haider, a promising pioneer in the industry of Export-Import trading business in Bangladesh, started a journey in the international trading industry with a vision to thrive with excellence and made a choice to uplift the trading industry of Bangladesh globally. Within this journey, TMZ Trade International Ltd. has experienced numerous challenges and blessings and still has made its way to the place that was aimed. With an enthusiastic team paired up with related professional qualifications and skills, TMZ Trade International Ltd. has succeeded to achieve a strong place in the global sector within this short period and progressing now and then with a growing trading business. Currently, TMZ Trade International Ltd. is mainly operating its trade in Singapore, Malaysia, Srilanka, UAE, Saudi Arabia, Oman, Vietnam, Philippines and Russia. The sole products are ranged from textile, agro, poultry, fisheries, leather, jute goods and crafted accessories.</p>
             <p>Our policy is to build a long-lasting relationship with our clients by not only meeting their orders but also by offering them a competitive advantage in the form of best price, in time delivery, best suitable delivery method and never tend to compromise with pre ordered schedule. We also follow the same professional practices with our exporters and suppliers that have made our network even stronger and continue to make progress altogether.</p>
             <p>We are optimistic in encouraging other startups, small businesses and running businesses that are looking for good network and trading supports. TMZ Trade International Ltd. is open for all to come ahead and move forward together in the global and local trading industry with harmony.</p>
@@ -82,8 +82,8 @@
     </div>
    </section>
    <!-- mission vission values -->
-    <section class="w-full py-7">
-        <div class="parent h-80 grid grid-cols-1 md:grid-cols-3 gap-7">
+    <section class="w-full py-7 overflow-hidden">
+        <div class="parent md:h-80 grid grid-cols-1 md:grid-cols-3 gap-7">
             <div class="col-span-1 px-5 pt-7 pb-12 flex flex-col items-center gap-y-7 rounded-md hover:shadow-lg hover:pt-5 hover:pb-10 transition-all duration-300">
                 <div class="h-16 w-16 flex items-center justify-center rounded-full bg-gray-700 hover:bg-red-600 transitions duration-150">
                     <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="#fff" d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg>
