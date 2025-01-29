@@ -33,7 +33,7 @@
         <li x-data="{wwd: false}" @mouseover="wwd = true" @mouseout="wwd = false" class="relative flex items-center gap-x-2.5">
           <a href="index.html" class="leading-10">What we do</a>
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
-          <ul x-show="wwd" x-cloak class="absolute w-full text-center top-[39px] whitespace-nowrap">
+          <ul x-show="wwd" x-cloak class="absolute z-10 w-full text-center top-[39px] whitespace-nowrap">
             <li class="bg-primary hover:bg-[#1f6496] cursor-pointer py-0.5 border-t border-black">
               <a href="index.html" class="leading-10">Export</a>
             </li>
@@ -54,7 +54,7 @@
         <li x-data="{wwd: false}" @mouseover="wwd = true" @mouseout="wwd = false" class="relative flex items-center gap-x-2.5">
           <a href="index.html" class="leading-10">SiSTER CONCERN</a>
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
-          <ul x-show="wwd" x-cloak class="absolute w-full text-center top-[39px] whitespace-nowrap">
+          <ul x-show="wwd" x-cloak class="z-10 absolute w-full text-center top-[39px] whitespace-nowrap">
             <li class="bg-primary hover:bg-[#1f6496] cursor-pointer py-0.5 border-t border-black">
               <a href="index.html" class="leading-10">TMZ Footwear</a>
             </li>
@@ -194,8 +194,6 @@
       </div>
     </div>
    </section>
-
-
   <!-- product slider -->
    <section class="w-full">
     <div class="parent">
@@ -222,6 +220,43 @@
       </div>
     </div>
    </section>
+   <!-- footer -->
+    <footer class="w-full bg-[#0d4f7d] pt-10 pb-5">
+      <div class="parent text-center">
+        <div class="w-full flex items-center justify-between flex-col md:flex-row">
+          <h1 class="text-base md:text-xl text-white font-medium">TMZ Trade International (Pvt.) Ltd.</h1>
+          <img src="public/img/logo.png" alt="" class="h-6 md:h-16">
+        </div>
+        <div class="w-full grid grid-cols-1 md:grid-cols-4 text-start text-white">
+          <div class="col-span-1 flex flex-col">
+            <h3 class="font-bold">What We Do</h3>
+            <span class="text-sm">Import</span>
+            <span class="text-sm">Export</span>
+          </div>
+          <div class="col-span-1 flex flex-col">
+            <h3 class="font-bold">Contact with us</h3>
+            <span class="text-sm mb-0.5">Twohid Hossan</span>
+            <span class="text-sm mb-0.5">Managing Director</span>
+            <span class="text-sm mb-0.5">Email: twohid.hossan@tmz.com.bd</span>
+            <br>
+            <span class="text-sm mb-0.5">Mehebuba Chowdhury</span>
+            <span class="text-sm mb-0.5">Chairman</span>
+            <span class="text-sm">Email: mehebuba.chowdhury@tmz.com.bd</span>
+          </div>
+          <div class="col-span-2 flex flex-col">
+            <h3 class="font-bold">Address</h3>
+            <span class="text-sm mb-0.5">Corporate Address: 126, South Jatrabari, Dhaka - 1204</span>
+            <span class="text-sm mb-0.5">Registered Address: Plot # 330, South Jatrabari, Pubali Area, Dhaka - 1204</span>
+            <span class="text-sm mb-0.5">Branch Office: 78, Moulovibazar, Chawkbazar, Moulvibazar Trade Centre, Dhaka-1211</span>
+            <span class="text-sm mb-0.5">Chittagong Office: 23/A, M.M Ali Road, R.I Tower, Golpahar Mor, Chattogram. </span>
+            <span class="text-sm mb-0.5">Factory: 1: 16, Medical Road, Shamimbag, Kadamtali, Dhaka - 1362.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="w-full text-center bg-[#002e4e] py-2 text-white">
+      <small class="text-center">This website developed by <a href="#" class="font-semibold">MMIT Soft LTD</a> © 2022 All rights reserved by <a href="index.html" class="font-semibold">TMZ Trade International (Pvt.) Ltd.</a></small>
+    </div>
   <!-- script for hero slider -->
   <script>
     function slider() {
