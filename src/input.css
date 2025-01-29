@@ -5,3 +5,6 @@
 .parent {
     @apply w-10/12 m-auto;
 }
+.transitions {
+    @apply transition-all duration-300;
+}
