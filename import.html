@@ -31,7 +31,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
           <ul x-show="wwd" x-cloak class="absolute z-10 w-full text-center top-[39px] whitespace-nowrap">
             <li class="bg-[#002e4e] hover:bg-[#1f6496] cursor-pointer py-0.5 border-t border-black">
-              <a href="index.html" class="leading-10">Export</a>
+              <a href="export.html" class="leading-10">Export</a>
             </li>
             <li class="bg-[#002e4e] hover:bg-[#1f6496] cursor-pointer py-0.5 border-t border-black">
               <a href="import.html" class="leading-10">Import</a>
@@ -39,10 +39,10 @@
           </ul>
         </li>
         <li>
-          <a href="index.html" class="leading-10">Authenticity</a>
+          <a href="authenticaty.html" class="leading-10">Authenticity</a>
         </li>
         <li>
-          <a href="index.html" class="leading-10">Our Clients</a>
+          <a href="clients.html" class="leading-10">Our Clients</a>
         </li>
         <li>
           <a href="index.html" class="leading-10">Gallery</a>
@@ -75,9 +75,35 @@
             <h2 class="absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 bg-white px-20 text-4xl font-semibold">IMPORT</h2>
         </div>
         <div class="flex flex-col gap-y-5 text-xs tracking-widest leading-8 md:text-sm">
-            <p>Zeal International Limited is a leading international Export and Import Company and Supplier of textile, agro, poultry, fisheries, leather, jute goods and crafted accessories of premium quality within an economic price range. Our objectives drive us to deliver products with utmost care that ensures an automated system of manufacturing, sophisticated monitoring and picking up the premium quality when it comes to raw materials. Despite the factors with global shipment, we are quite strict with delivery on time whether we are exporting, importing or supplying. To keep up with the premium quality of products, maintaining delivery schedules is crucial and mandatory. Our principle is to never compromise with delayed shipment by any means to ensure proper quality of goods and customer demands.</p>
+            <p>TMZ Trade International Ltd. is a leading international Export and Import Company and Supplier of textile, agro, poultry, fisheries, leather, jute goods and crafted accessories of premium quality within an economic price range. Our objectives drive us to deliver products with utmost care that ensures an automated system of manufacturing, sophisticated monitoring and picking up the premium quality when it comes to raw materials. Despite the factors with global shipment, we are quite strict with delivery on time whether we are exporting, importing or supplying. To keep up with the premium quality of products, maintaining delivery schedules is crucial and mandatory. Our principle is to never compromise with delayed shipment by any means to ensure proper quality of goods and customer demands.</p>
             <p class="font-bold">Our Main Import Products are Maize, Wheat, Rice, Spices, Chemical and Machineries.</p>
         </div>
+    </div>
+   </section>
+   <!-- product slider -->
+   <section class="w-full">
+    <div class="parent">
+      <div class="w-full border-b">
+        <h1 class="text-[#333] text-4xl font-semibold">PRODUCTS</h1>
+      </div>
+      <div x-data="flowingSlider()" x-init="startAutoSlide()" class="overflow-hidden w-full py-5">
+        <div class="flex transition-transform duration-700 ease-linear"
+            :style="'transform: translateX(-' + currentIndex * slideWidth + 'px)'">
+          <!-- Slides -->
+          <template x-for="(slide, index) in slides" :key="index">
+            <div class="h-64 w-64 border bg-white rounded-md overflow-hidden flex-shrink-0 mx-2 shadow-md">
+              <img :src="slide.image" alt="Certificate" class="w-full h-full object-contain">
+            </div>
+          </template>
+
+          <!-- Duplicated slides for infinite loop -->
+          <template x-for="(slide, index) in slides" :key="'duplicate-' + index">
+            <div class="h-36 w-64 border bg-white rounded-md overflow-hidden flex-shrink-0 mx-2 shadow-md px-2">
+              <img :src="slide.image" alt="Certificate" class="w-full h-full object-contain">
+            </div>
+          </template>
+        </div>
+      </div>
     </div>
    </section>
    <!-- footer -->
@@ -114,6 +140,62 @@
       </div>
     </div>
   </footer>
+  <!-- script for product slider -->
+  <script>
+    function flowingSlider() {
+      return {
+        currentIndex: 0, // Tracks the current slide index
+        slideWidth: 256, // Width of each slide (adjust based on the number of columns in your grid)
+        slides: [
+          { image: "public/img/product-slider/1.jpg" },
+          { image: "public/img/product-slider/2.jpg" },
+          { image: "public/img/product-slider/4.jpg" },
+          { image: "public/img/product-slider/7.jpg" },
+          { image: "public/img/product-slider/8.jpg" },
+          { image: "public/img/product-slider/10.jpg" },
+          { image: "public/img/product-slider/12.jpg" },
+          { image: "public/img/product-slider/13.jpg" },
+          { image: "public/img/product-slider/14.jpg" },
+          { image: "public/img/product-slider/15.jpg" },
+          { image: "public/img/product-slider/16.jpg" },
+          { image: "public/img/product-slider/17.jpg" },
+          { image: "public/img/product-slider/23.jpg" },
+          { image: "public/img/product-slider/24.jpg" },
+          { image: "public/img/product-slider/28.jpg" },
+          { image: "public/img/product-slider/30.jpg" },
+          { image: "public/img/product-slider/31.jpg" },
+          { image: "public/img/product-slider/31.jpg" },
+          { image: "public/img/product-slider/34.jpg" },
+          { image: "public/img/product-slider/36.jpg" },
+          { image: "public/img/product-slider/44.jpg" },
+          { image: "public/img/product-slider/48.jpg" },
+          { image: "public/img/product-slider/49.jpg" },
+          { image: "public/img/product-slider/50.jpg" },
+          { image: "public/img/product-slider/52.jpg" },
+          { image: "public/img/product-slider/53.jpg" },
+          { image: "public/img/product-slider/54.jpg" },
+          { image: "public/img/product-slider/55.jpg" },
+          { image: "public/img/product-slider/56.jpg" },
+          { image: "public/img/product-slider/57.jpg" },
+          { image: "public/img/product-slider/61.jpg" },
+          { image: "public/img/product-slider/62.jpg" },
+          { image: "public/img/product-slider/63.jpg" },
+          // Add as many slides as needed
+        ],
+        startAutoSlide() {
+          setInterval(() => {
+            // Move to the next set of slides; if at the end, loop back to the first set
+            if (this.currentIndex + 1 >= this.slides.length) {
+              // Instant jump back to first slide (without animation) to avoid jumpy effect
+              this.currentIndex = 0;
+            } else {
+              this.currentIndex++;
+            }
+          }, 2000); // Slide every 2 seconds
+        },
+      };
+    }
+  </script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </body>
 </html>
