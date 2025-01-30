@@ -15,11 +15,11 @@
   </div>
   <!-- navbar -->
    <nav x-data="{resNav: false}" class="w-full bg-primary text-white uppercase">
-    <button @click="resNav = !resNav" class="p-2 md:hidden">
+    <button @click="resNav = !resNav" class="p-2 lg:hidden">
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
     </button>
-    <div :class="resNav ? 'block' : 'hidden md:block'" class="parent">
-      <ul class="flex items-center justify-center flex-col md:flex-row gap-x-8 gap-y-1 md:text-base text-xs">
+    <div :class="resNav ? 'block' : 'hidden lg:block'" class="parent">
+      <ul class="flex items-center justify-center flex-col lg:flex-row gap-x-3 lg:gap-x-8 gap-y-1 md:text-sm lg::text-base text-xs">
         <li>
           <a href="index.html" class="leading-10">Home</a>
         </li>
@@ -72,11 +72,15 @@
    <section class="w-full py-7">
     <div class="parent flex flex-col gap-y-14">
         <div class="relative w-full h-1 bg-gray-300">
-            <h2 class="absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 bg-white px-20 text-4xl font-semibold">Export</h2>
+            <h2 class="absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 bg-white md:px-20 px-6 text-4xl font-semibold">Export</h2>
         </div>
         <div class="flex flex-col gap-y-5 text-xs tracking-widest leading-8 md:text-sm">
-            <p>Zeal International Limited is a leading international Export and Import Company and Supplier of textile, agro, poultry, fisheries, leather, jute goods and crafted accessories of premium quality within an economic price range. Our objectives drive us to deliver products with utmost care that ensures an automated system of manufacturing, sophisticated monitoring and picking up the premium quality when it comes to raw materials. Despite the factors with global shipment, we are quite strict with delivery on time whether we are exporting, importing or supplying. To keep up with the premium quality of products, maintaining delivery schedules is crucial and mandatory. Our principle is to never compromise with delayed shipment by any means to ensure proper quality of goods and customer demands.</p>
-            <p class="font-bold">Our Main Export Products are Potatoes, Fresh Fruits and Fresh Vegetables</p>
+            <p>TMZ Trade International (pvt.) is leading company that export premium products from Bangladesh. We export readymade garments, various jute products, spices, leather items and other products from Bangladesh to different countries of the world (Germany, China, Turkey, European countries) which play an important role in the country's economy.</p>
+           <div>
+            <p>*Ready-made garments products such as T-shirts. (Export to Germany)</p>
+            <p>*Jute items, for instance, jute bags, jute yarn, jute net, coffee bags, etc. (Export to turkey & China)</p>
+            <p>* Leather goods: Footwear & footwear components, bags, wallet, belts, accessories, etc. (Export to some Europe)</p>
+           </div>
         </div>
     </div>
    </section>
