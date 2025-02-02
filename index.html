@@ -82,11 +82,11 @@
          :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
       <template x-for="(slide, index) in slides" :key="index">
         <div class="w-full flex-shrink-0">
-          <div class="w-full py-20 bg-center bg-cover flex items-end justify-end md:pr-12" 
+          <div class="w-full py-20 bg-center h-96 md:h-[410px] bg-cover flex items-end justify-end md:pr-12" 
                :style="`background-image: url(${slide.image});`">
-            <div class="text-white bg-[#a5a5a56e] flex flex-col items-end gap-y-3 mr-7 md:mr-10 min-w-80 md:min-w-[500px] px-5 py-8 rounded-lg" style="backdrop-filter: blur(3px);">
-              <h1 class="text-xl md:text-4xl font-bold" x-text="slide.title"></h1>
-              <span class="text-lg md:text-3xl" x-text="slide.subtitle"></span>
+            <div class="text-white bg-[#a5a5a56e] flex flex-col items-end gap-y-3 mr-7 md:mr-10 max-w-80 md:max-w-[700px] px-5 py-8 rounded-lg" style="backdrop-filter: blur(3px);">
+              <h1 class="text-xl md:text-4xl font-bold text-end" x-text="slide.title"></h1>
+              <span class="text-lg md:text-3xl text-end" x-text="slide.subtitle"></span>
               <div class="flex flex-col gap-2">
                 <a :href="slide.partnerLink"
                    class="border border-white text-sm px-4 py-1 hover:bg-white hover:text-black font-medium rounded-md flex items-center gap-2 transition-all">
@@ -271,36 +271,36 @@
             // Simulate fetching data from an API or another source
             this.slides = [
               {
-                title: "#1st Driverless Car Leasing",
-                subtitle: "Platform Of Bangladesh",
+                title: "Connecting Global Markets",
+                subtitle: "Emphasizes international reach and the bridging of trade gaps.",
                 image: "public/img/25.png",
                 partnerLink: "#",
                 nimbusLink: "#",
               },
               {
-                title: "Join the Revolution",
-                subtitle: "Drive the Future Today",
+                title: "Your Trusted Import & Export Partner",
+                subtitle: "Highlights reliability and partnership in global trade",
                 image: "public/img/26.jpg",
                 partnerLink: "#",
                 nimbusLink: "#",
               },
               {
-                title: "Innovate with Nimbus",
-                subtitle: "Experience Driverless Excellence",
+                title: "Streamlining Global Trade Solutions",
+                subtitle: "Focuses on the efficiency and expertise in handling international logistics.",
                 image: "public/img/27.jpg",
                 partnerLink: "#",
                 nimbusLink: "#",
               },
               {
-                title: "#1st Driverless Car Leasing",
-                subtitle: "Platform Of Bangladesh",
+                title: "Empowering Your Global Business",
+                subtitle: "Conveys strength and support in expanding your business across borders.",
                 image: "public/img/28.jpg",
                 partnerLink: "#",
                 nimbusLink: "#",
               },
               {
-                title: "Join the Revolution",
-                subtitle: "Drive the Future Today",
+                title: "Navigating International Trade with Confidence",
+                subtitle: "Reassures potential clients of your experience and expertise.",
                 image: "public/img/29.jpg",
                 partnerLink: "#",
                 nimbusLink: "#",
@@ -312,7 +312,7 @@
             this.stopAutoplay(); 
             this.interval = setInterval(() => {
               this.nextSlide();
-            }, 2000); // Autoplay every 2000ms
+            }, 3000); // Autoplay every 2000ms
           },
           stopAutoplay() {
             // Clear the interval
