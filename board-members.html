@@ -54,9 +54,6 @@
             </li>
           </ul>
         </li>
-        <li>
-          <a href="board-members.html" class="leading-10">BOARD OF MEMBERS </a>
-        </li>
           <a href="board-members.html" class="leading-10">BOARD OF MEMBERS </a>
         </li>
         <li>
@@ -72,98 +69,18 @@
    <section class="w-full py-7">
     <div class="parent flex flex-col gap-y-14 md:pt-4">
         <div class="relative w-full h-1 bg-gray-300">
-            <h2 class="absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 bg-white md:px-20 px-3 whitespace-nowrap md:text-4xl font-semibold">Your Questions, Answered </h2>
+            <h2 class="absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 bg-white md:px-20 px-3 whitespace-nowrap md:text-4xl font-semibold">Board Members</h2>
         </div>
-        <div class="flex flex-col gap-y-5 text-xs tracking-widest leading-6 md:leading-8 md:text-sm">
-            <div x-data="{question: false}" class="w-full p-3 border rounded-md flex flex-col gap-y-2">
-              
-              <button @click="question = !question" class="w-full flex justify-between">
-                <h2 class="text-lg font-semibold text-start">When was TMZ Trade International (Pvt.) Ltd established?</h2>
-                <svg x-show="question" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minus"><path d="M5 12h14"/></svg>
-                <svg x-show="!question" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
-              </button>
-              <p x-show="question" x-cloak x-transition class="text-sm">TMZ Trade International (Pvt.) Ltd was established in 2011.</p>
+        <div class="grid grid-cols-2 gap-8 text-xs tracking-widest leading-6 md:leading-6 md:text-sm">
+            <div class="bg-[#0d4f7d] rounded-md p-4 col-span-1 text-white">
+                <h1 class="font-bold text-xl">Twohid Hossan</h1>
+                <p class="text-sm">Managing Director</p>
+                <p class="font-medium">Email: twohid.hossan@tmz.com.bd</p>
             </div>
-            <div x-data="{question: false}" class="w-full p-3 border rounded-md flex flex-col gap-y-2">
-              
-              <button @click="question = !question" class="w-full flex justify-between">
-                <h2 class="text-lg font-semibold text-start">What does TMZ Trade International (Pvt.) Ltd specialize in?</h2>
-                <svg x-show="question" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minus"><path d="M5 12h14"/></svg>
-                <svg x-show="!question" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
-              </button>
-              <p x-show="question" x-cloak x-transition class="text-sm">We specialize in export and import services, facilitating global trade and connecting markets worldwide.</p>
-            </div>
-            <div x-data="{question: false}" class="w-full p-3 border rounded-md flex flex-col gap-y-2">
-              
-              <button @click="question = !question" class="w-full flex justify-between">
-                <h2 class="text-lg font-semibold text-start">How many employees work at TMZ Trade International (Pvt.) Ltd?</h2>
-                <svg x-show="question" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minus"><path d="M5 12h14"/></svg>
-                <svg x-show="!question" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
-              </button>
-              <p x-show="question" x-cloak x-transition class="text-sm">We have a strong team of over 200 employees working across various locations in Bangladesh</p>
-            </div>
-            <div x-data="{question: false}" class="w-full p-3 border rounded-md flex flex-col gap-y-2">
-              
-              <button @click="question = !question" class="w-full flex justify-between">
-                <h2 class="text-lg font-semibold text-start"> Where is TMZ Trade International (Pvt.) Ltd located?</h2>
-                <svg x-show="question" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minus"><path d="M5 12h14"/></svg>
-                <svg x-show="!question" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
-              </button>
-              <p x-show="question" x-cloak x-transition class="text-sm">Our headquarters and offices are located in 126, South Jatrabari, Dhaka - 1204 Bangladesh, with a presence in key regions to support our global operations.</p>
-            </div>
-            <div x-data="{question: false}" class="w-full p-3 border rounded-md flex flex-col gap-y-2">
-              
-              <button @click="question = !question" class="w-full flex justify-between">
-                <h2 class="text-lg font-semibold text-start">What types of products or services does TMZ Trade International (Pvt.) Ltd handle?</h2>
-                <svg x-show="question" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minus"><path d="M5 12h14"/></svg>
-                <svg x-show="!question" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
-              </button>
-              <p x-show="question" x-cloak x-transition class="text-sm">We handle a wide range of products and services tailored to meet the needs of our clients. For specific details, please contact our team or visit our product/services page.</p>
-            </div>
-            <div x-data="{question: false}" class="w-full p-3 border rounded-md flex flex-col gap-y-2">
-              
-              <button @click="question = !question" class="w-full flex justify-between">
-                <h2 class="text-lg font-semibold text-start">Does TMZ Trade International (Pvt.) Ltd operate internationally?</h2>
-                <svg x-show="question" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minus"><path d="M5 12h14"/></svg>
-                <svg x-show="!question" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
-              </button>
-              <p x-show="question" x-cloak x-transition class="text-sm">Yes, we operate on a global scale, facilitating trade between Bangladesh and international markets.</p>
-            </div>
-            <div x-data="{question: false}" class="w-full p-3 border rounded-md flex flex-col gap-y-2">
-              
-              <button @click="question = !question" class="w-full flex justify-between">
-                <h2 class="text-lg font-semibold text-start">How can I contact TMZ Trade International (Pvt.) Ltd for business inquiries?</h2>
-                <svg x-show="question" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minus"><path d="M5 12h14"/></svg>
-                <svg x-show="!question" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
-              </button>
-              <p x-show="question" x-cloak x-transition class="text-sm">You can reach out to us through our <a href="contact.html" class="font-semibold">contact page</a> on the website, or email us at info@tmz.com.bd. Alternatively, you can call us at +8802 7550704 or WhatsApp +8801835299967.</p>
-            </div>
-            <div x-data="{question: false}" class="w-full p-3 border rounded-md flex flex-col gap-y-2">
-              
-              <button @click="question = !question" class="w-full flex justify-between">
-                <h2 class="text-lg font-semibold text-start">What makes TMZ Trade International (Pvt.) Ltd stand out in the import-export industry?</h2>
-                <svg x-show="question" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minus"><path d="M5 12h14"/></svg>
-                <svg x-show="!question" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
-              </button>
-              <p x-show="question" x-cloak x-transition class="text-sm">With over a decade of experience, a dedicated team of 200+ professionals, and a commitment to excellence, we pride ourselves on delivering reliable, efficient, and customer-focused trade solutions.</p>
-            </div>
-            <div x-data="{question: false}" class="w-full p-3 border rounded-md flex flex-col gap-y-2">
-              
-              <button @click="question = !question" class="w-full flex justify-between">
-                <h2 class="text-lg font-semibold text-start">Does TMZ Trade International (Pvt.) Ltd provide logistics and shipping services?</h2>
-                <svg x-show="question" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minus"><path d="M5 12h14"/></svg>
-                <svg x-show="!question" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
-              </button>
-              <p x-show="question" x-cloak x-transition class="text-sm">Yes, we offer end-to-end logistics and shipping services to ensure seamless transportation of goods across borders.</p>
-            </div>
-            <div x-data="{question: false}" class="w-full p-3 border rounded-md flex flex-col gap-y-2">
-              
-              <button @click="question = !question" class="w-full flex justify-between">
-                <h2 class="text-lg font-semibold text-start">Is TMZ Trade International (Pvt.) Ltd involved in corporate social responsibility (CSR) activities?</h2>
-                <svg x-show="question" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minus"><path d="M5 12h14"/></svg>
-                <svg x-show="!question" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
-              </button>
-              <p x-show="question" x-cloak x-transition class="text-sm">Yes, we are committed to giving back to the community and engaging in sustainable practices. Learn more about our CSR initiatives on our website.</p>
+            <div class="bg-[#0d4f7d] rounded-md p-4 col-span-1 text-white">
+                <h1 class="font-bold text-xl">Mehebuba Chowdhury</h1>
+                <p class="text-sm">Chairman</p>
+                <p class="font-medium">Email: mehebuba.chowdhury@tmz.com.bd</p>
             </div>
         </div>
     </div>
