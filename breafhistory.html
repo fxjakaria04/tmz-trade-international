@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About page</title>
+    <link rel="stylesheet" href="public/css/output.css">
+</head>
+<body>
+    <!-- topbar -->
+  <div class="w-full p-3" style="background: url(public/img/top-banner.jpg); background-size: cover;">
+    <div class="h-20 max-w-[50%]">
+      <img src="public/img/logo.png" alt="" class="w-full h-full object-contain">
+    </div>
+  </div>
+  <!-- navbar -->
+  <nav x-data="{resNav: false}" class="w-full bg-primary text-white uppercase">
+    <button @click="resNav = !resNav" class="p-2 lg:hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+    </button>
+    <div :class="resNav ? 'block' : 'hidden lg:block'" class="parent">
+      <ul class="flex items-start justify-center flex-col lg:flex-row gap-x-3 lg:gap-x-8 gap-y-1 md:text-sm lg::text-base text-xs">
+        <li>
+          <a href="index.html" class="leading-10">Home</a>
+        </li>
+        
+        <li x-data="{wwd: false}" @mouseover="wwd = true" @mouseout="wwd = false" class="relative flex items-center gap-x-2">
+          <a class="leading-10">About Us</a>
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+          <ul x-show="wwd" x-cloak class="absolute z-10 w-36 text-center top-[39px] whitespace-nowrap">
+            <li class="bg-[#002e4e] hover:bg-[#1f6496] cursor-pointer py-0.5 border-t border-black">
+              <a href="breafhistory.html" class="leading-10">Brief history</a>
+            </li>
+            <li class="bg-[#002e4e] hover:bg-[#1f6496] cursor-pointer py-0.5 border-t border-black">
+              <a href="mission-vission.html" class="leading-10">Vision & mission</a>
+            </li>
+          </ul>
+        </li>
+        <li x-data="{wwd: false}" @mouseover="wwd = true" @mouseout="wwd = false" class="relative flex items-center gap-x-2">
+          <a class="leading-10">OUR SERVICES</a>
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+          <ul x-show="wwd" x-cloak class="absolute z-10 w-full text-center top-[39px] whitespace-nowrap">
+            <li class="bg-[#002e4e] hover:bg-[#1f6496] cursor-pointer py-0.5 border-t border-black">
+              <a href="export.html" class="leading-10">Export</a>
+            </li>
+            <li class="bg-[#002e4e] hover:bg-[#1f6496] cursor-pointer py-0.5 border-t border-black">
+              <a href="import.html" class="leading-10">Import</a>
+            </li>
+          </ul>
+        </li>
+        <li x-data="{wwd: false}" @mouseover="wwd = true" @mouseout="wwd = false" class="relative flex items-center gap-x-2">
+          <a class="leading-10">SiSTER CONCERN</a>
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+          <ul x-show="wwd" x-cloak class="z-10 absolute w-full text-center top-[39px] whitespace-nowrap">
+            <li class="bg-[#002e4e] hover:bg-[#1f6496] cursor-pointer py-0.5 border-t border-black">
+              <a class="leading-10">TMZ Footwear</a>
+            </li>
+            <li class="bg-[#002e4e] hover:bg-[#1f6496] cursor-pointer py-0.5 border-t border-black">
+              <a href="tmz-auto-parts.html" class="leading-10">TMZ Auto Parts</a>
+            </li>
+            <li class="bg-[#002e4e] hover:bg-[#1f6496] cursor-pointer py-0.5 border-t border-black">
+              <a class="leading-10">TMZ Holidays</a>
+            </li>
+          </ul>
+        </li>
+          <a href="board-members.html" class="leading-10">BOARD OF MEMBERS </a>
+        </li>
+        <li>
+          <a href="faq.html" class="leading-10">FAQ</a>
+        </li>
+        <li>
+          <a href="contact.html" class="leading-10">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+   </nav>
+   <!-- about us -->
+   <section class="w-full py-7">
+    <div class="parent flex flex-col gap-y-14">
+        <div class="relative w-full h-1 bg-gray-300">
+            <h2 class="absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 bg-white md:px-20 px-5 whitespace-nowrap text-2xl md:text-4xl font-semibold">Brief history</h2>
+        </div>
+        <div class="flex flex-col gap-y-5 text-xs tracking-widest leading-6 md:leading-8 md:text-sm">
+            <p>In 2018, Md. Arif Haider, a promising pioneer in the industry of Export-Import trading business in Bangladesh, started a journey in the international trading industry with a vision to thrive with excellence and made a choice to uplift the trading industry of Bangladesh globally. Within this journey, TMZ Trade International Ltd. has experienced numerous challenges and blessings and still has made its way to the place that was aimed. With an enthusiastic team paired up with related professional qualifications and skills, TMZ Trade International Ltd. has succeeded to achieve a strong place in the global sector within this short period and progressing now and then with a growing trading business. Currently, TMZ Trade International Ltd. is mainly operating its trade in Singapore, Malaysia, Srilanka, UAE, Saudi Arabia, Oman, Vietnam, Philippines and Russia. The sole products are ranged from textile, agro, poultry, fisheries, leather, jute goods and crafted accessories.</p>
+            <p>Our policy is to build a long-lasting relationship with our clients by not only meeting their orders but also by offering them a competitive advantage in the form of best price, in time delivery, best suitable delivery method and never tend to compromise with pre ordered schedule. We also follow the same professional practices with our exporters and suppliers that have made our network even stronger and continue to make progress altogether.</p>
+            <p>We are optimistic in encouraging other startups, small businesses and running businesses that are looking for good network and trading supports. TMZ Trade International Ltd. is open for all to come ahead and move forward together in the global and local trading industry with harmony.</p>
+        </div>
+    </div>
+   </section>
+   
+   <!-- footer -->
+   <footer class="w-full bg-[#0d4f7d] pt-10 pb-5">
+    <div class="parent text-center">
+      <div class="w-full flex items-center justify-between flex-col md:flex-row">
+          <h1 class="text-base md:text-xl text-white font-medium">TMZ Trade International (Pvt.) Ltd.</h1>
+          <img src="public/img/logo_white_text.png" alt="" class="h-6 md:h-16">
+        </div>
+      <div class="w-full grid grid-cols-1 md:grid-cols-4 text-start text-white">
+        <div class="col-span-1 flex flex-col border-b md:border-none py-5 md:py-0 border-gray-400">
+          <h3 class="font-bold">OUR SERVICES</h3>
+          <span class="text-sm">Import</span>
+          <span class="text-sm">Export</span>
+        </div>
+        <div class="col-span-1 flex flex-col border-b md:border-none py-5 md:py-0 border-gray-400">
+          <h3 class="font-bold">Contact with us</h3>
+          <span class="text-sm mb-0.5">Twohid Hossan</span>
+          <span class="text-sm mb-0.5">Managing Director</span>
+          <span class="text-sm mb-0.5">Email: twohid.hossan@tmz.com.bd</span>
+          <br>
+          <span class="text-sm mb-0.5">Mehebuba Chowdhury</span>
+          <span class="text-sm mb-0.5">Chairman</span>
+          <span class="text-sm">Email: mehebuba.chowdhury@tmz.com.bd</span>
+        </div>
+        <div class="col-span-1 md:col-span-2 flex flex-col pt-5">
+          <h3 class="font-bold">Address</h3>
+          <span class="text-sm mb-0.5">Corporate Address: 126, South Jatrabari, Dhaka - 1204</span>
+          <span class="text-sm mb-0.5">Registered Address: Plot # 330, South Jatrabari, Pubali Area, Dhaka - 1204</span>
+          <span class="text-sm mb-0.5">Branch Office: 78, Moulovibazar, Chawkbazar, Moulvibazar Trade Centre, Dhaka-1211</span>
+          <span class="text-sm mb-0.5">Chittagong Office: 23/A, M.M Ali Road, R.I Tower, Golpahar Mor, Chattogram. </span>
+          <span class="text-sm mb-0.5">Factory: 1: 16, Medical Road, Shamimbag, Kadamtali, Dhaka - 1362.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="w-full text-center bg-[#002e4e] py-2 text-white">
+    <small class="text-center">This website developed by <a href="#" class="font-semibold">MMIT Soft LTD</a> © 2022 All rights reserved by <a href="index.html" class="font-semibold">TMZ Trade International (Pvt.) Ltd.</a></small>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</body>
+</html>
