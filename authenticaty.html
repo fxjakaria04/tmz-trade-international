@@ -24,9 +24,18 @@
           <a href="index.html" class="leading-10">Home</a>
         </li>
         
-        <li>
-            <a href="about.html" class="leading-10">About Us</a>
-          </li>
+        <li x-data="{wwd: false}" @mouseover="wwd = true" @mouseout="wwd = false" class="relative flex items-center gap-x-2">
+          <a class="leading-10">About Us</a>
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+          <ul x-show="wwd" x-cloak class="absolute z-10 w-36 text-center top-[39px] whitespace-nowrap">
+            <li class="bg-[#002e4e] hover:bg-[#1f6496] cursor-pointer py-0.5 border-t border-black">
+              <a href="breafhistory.html" class="leading-10">Brief history</a>
+            </li>
+            <li class="bg-[#002e4e] hover:bg-[#1f6496] cursor-pointer py-0.5 border-t border-black">
+              <a href="mission-vission.html" class="leading-10">Vision & mission</a>
+            </li>
+          </ul>
+        </li>
         <li x-data="{wwd: false}" @mouseover="wwd = true" @mouseout="wwd = false" class="relative flex items-center gap-x-2">
           <a class="leading-10">OUR SERVICES</a>
           <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
