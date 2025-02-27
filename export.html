@@ -136,6 +136,56 @@
                 </div>
                 
             </div>
+            <div x-data="flowingSlider()" x-init="startAutoSlide()" class="overflow-hidden w-full py-5">
+              <div class="flex transition-transform duration-700 ease-linear"
+                  :style="'transform: translateX(-' + currentIndex * slideWidth + 'px)'">
+                <!-- Slides -->
+                <template x-for="(slide, index) in slides" :key="index">
+                  <div class="h-36 w-64 border bg-white rounded-md overflow-hidden flex-shrink-0 mx-2 shadow-md px-2">
+                    <img :src="slide.image" alt="Certificate" class="w-full h-full object-contain">
+                  </div>
+                </template>
+      
+                <!-- Duplicated slides for infinite loop -->
+                <template x-for="(slide, index) in slides" :key="'duplicate-' + index">
+                  <div class="h-36 w-64 border bg-white rounded-md overflow-hidden flex-shrink-0 mx-2 shadow-md px-2">
+                    <img :src="slide.image" alt="Certificate" class="w-full h-full object-contain">
+                  </div>
+                </template>
+              </div>
+            </div>
+            <script>
+              function flowingSlider() {
+                return {
+                  currentIndex: 0, // Tracks the current slide index
+                  slideWidth: 256, // Width of each slide (adjust based on the number of columns in your grid)
+                  slides: [
+                    { image: "public/img/product-slider/7.jpg" },
+                    { image: "public/img/product-slider/8.jpg" },
+                    { image: "public/img/product-slider/10.jpg" },
+                    { image: "public/img/product-slider/12.jpg" },
+                    { image: "public/img/product-slider/23.jpg" },
+                    { image: "public/img/product-slider/24.jpg" },
+                    { image: "public/img/product-slider/50.jpg" },
+                    { image: "public/img/product-slider/52.jpg" },
+                    { image: "public/img/product-slider/53.jpg" },
+                    { image: "public/img/product-slider/54.jpg" }
+                    // Add as many slides as needed
+                  ],
+                  startAutoSlide() {
+                    setInterval(() => {
+                      // Move to the next set of slides; if at the end, loop back to the first set
+                      if (this.currentIndex + 1 >= this.slides.length) {
+                        // Instant jump back to first slide (without animation) to avoid jumpy effect
+                        this.currentIndex = 0;
+                      } else {
+                        this.currentIndex++;
+                      }
+                    }, 2000); // Slide every 2 seconds
+                  },
+                };
+              }
+            </script>
           
         </div>
     </div>
